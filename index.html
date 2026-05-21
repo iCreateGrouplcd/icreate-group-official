@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCreate Group | Leading Phone LCD Factory & RJ Brand Manufacturer</title>
+    <style>
+        :root {
+            --primary-color: #d10a11; /* iCreate Red */
+            --secondary-color: #1a1a1a; /* Professional Black */
+            --accent-color: #f5f5f5; /* Light Gray */
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        header {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 10%;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #a0080d;
+        }
+        .section {
+            padding: 80px 10%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature-card {
+            background: var(--accent-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .product-highlight {
+            background: var(--secondary-color);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .product-image, .product-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+        .product-info h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 40px 10%;
+            text-align: center;
+        }
+        .stat-item h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 60px 10% 20px;
+            text-align: center;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section { padding: 50px 5%; }
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="iCreate Group Logo">
+        iCreate GROUP
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#factory">Factory</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <!-- Background Video placeholder -->
+    <video autoplay muted loop playsinline>
+        <source src="factory_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>LEADING PHONE LCD FACTORY</h1>
+        <p>Premium RJ Brand & Soft OLED Manufacturer. Trusted OEM Partner for Tier-1 Global Distributors.</p>
+        <a href="https://wa.me/8619126639108" class="cta-button">Request Bulk Catalog</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2 class="section-title">Direct Factory Source</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Fully Automated Production</h3>
+            <p>Our facility is powered by state-of-the-art robotic lines, ensuring 100% precision and mass-scale output for global demand.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Universal Compatibility</h3>
+            <p>Perfect replacement for GX, JK, and DD quality levels. Engineered to define industry standards.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Ultra-Low RMA < 0.5%</h3>
+            <p>Every screen undergoes strict 100% manual and automated testing before shipment. Quality is our lifeline.</p>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="product-highlight">
+    <div class="product-image">
+        <img src="rj_oled_120hz.jpg" alt="RJ Soft OLED 120Hz" style="max-width: 100%; border-radius: 10px;">
+    </div>
+    <div class="product-info">
+        <h2>RJ SOFT OLED 120Hz</h2>
+        <p>The flagship choice for high-end iPhone series. Featuring 120Hz high refresh rate, 1:1 color accuracy, and seamless IC migration support.</p>
+        <ul>
+            <li>Soft OLED Technology (Flexible & Durable)</li>
+            <li>Zero Pop-up Warning (Support IC Removable)</li>
+            <li>Stable Supply Chain Guarantee</li>
+        </ul>
+        <a href="mailto:cs@icreate-group.com" class="cta-button">Get Sample Quote</a>
+    </div>
+</section>
+
+<div class="stats">
+    <div class="stat-item">
+        <h2>12+</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat-item">
+        <h2>50k+</h2>
+        <p>Monthly Output</p>
+    </div>
+    <div class="stat-item">
+        <h2>< 0.5%</h2>
+        <p>RMA Rate</p>
+    </div>
+</div>
+
+<section id="factory" class="section">
+    <h2 class="section-title">Global OEM Partnerships</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto;">We are the trusted manufacturing backbone for the world's largest aftermarket screen distributors. We handle the complexity so you can focus on the market.</p>
+    <!-- Gallery Placeholder -->
+</section>
+
+<footer id="contact">
+    <div class="logo" style="justify-content: center; margin-bottom: 20px; color: #fff;">
+        iCreate GROUP
+    </div>
+    <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+    </div>
+    <div class="contact-info">
+        <p>Email: cs@icreate-group.com | WhatsApp: +86 19126639108 | WeChat: cserenagh</p>
+        <p>© 2026 iCreate Group. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+        </html>
