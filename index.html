@@ -40,23 +40,27 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
         .logo-emblem {
-            width: 52px;
-            height: 52px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+        }
+        .logo-emblem img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
         .logo-text {
             display: flex;
             flex-direction: column;
             line-height: 1.1;
         }
-        .logo-text span:first-child { color: var(--primary-color); font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; }
-        .logo-text span:last-child { color: var(--secondary-color); font-weight: 900; font-size: 1.1rem; letter-spacing: 2px; }
+        .logo-text span:first-child { color: var(--primary-color); font-weight: 800; font-size: 1.6rem; letter-spacing: -0.5px; }
+        .logo-text span:last-child { color: var(--secondary-color); font-weight: 900; font-size: 1.2rem; letter-spacing: 2px; }
 
         nav { display: flex; }
         nav a {
@@ -74,7 +78,7 @@
         .hero {
             position: relative;
             height: 75vh;
-            background: #000;
+            background: #000; /* Fallback color */
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -93,6 +97,7 @@
             transform: translate(-50%, -50%);
             opacity: 0.5;
             z-index: 0;
+            object-fit: cover;
         }
         .hero-content {
             position: relative;
@@ -278,6 +283,9 @@
             .cert-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
             header { padding: 0.8rem 4%; }
             nav { display: none; }
+            .logo-emblem { width: 50px; height: 50px; }
+            .logo-text span:first-child { font-size: 1.3rem; }
+            .logo-text span:last-child { font-size: 1rem; }
         }
     </style>
 </head>
@@ -286,29 +294,7 @@
 <header>
     <a href="#" class="logo">
         <div class="logo-emblem">
-            <!-- Recreated 3D Circular Emblem based on Photo -->
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#e9ecef;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#dee2e6;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="red3D" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#ff4d4d;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#a0080d;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <!-- Silver Outer Circle -->
-                <circle cx="50" cy="50" r="48" fill="url(#silverGrad)" stroke="#ced4da" stroke-width="0.5"/>
-                <!-- Red Hook Shape (i) -->
-                <path d="M50 12 C30 12, 12 30, 12 50 C12 70, 30 88, 50 88 C70 88, 88 70, 88 50" fill="none" stroke="url(#red3D)" stroke-width="12" stroke-linecap="round" />
-                <!-- Inner Cutout -->
-                <circle cx="50" cy="50" r="28" fill="#fff" />
-                <!-- Red Dot and Bar -->
-                <rect x="44" y="42" width="12" height="32" rx="3" fill="url(#red3D)" />
-                <circle cx="50" cy="30" r="8" fill="url(#red3D)" />
-            </svg>
+            <img src="https://sc02.alicdn.com/kf/Adde0bcd8694a45e2affb2a93963be645z.png" alt="iCreate Logo">
         </div>
         <div class="logo-text">
             <span>iCreate</span>
@@ -324,8 +310,9 @@
 </header>
 
 <section class="hero">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline poster="cover.jpg">
         <source src="iCreate_Factory_Auto_Line_V1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
     <div class="hero-content">
         <h1>LEADING PHONE LCD FACTORY</h1>
@@ -429,4 +416,4 @@
 </footer>
 
 </body>
-    </html>
+</html>
