@@ -286,9 +286,10 @@
             .hero p { font-size: 1rem; }
             .features { flex-direction: column; gap: 15px; }
             .cert-row { flex-wrap: wrap; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-            header { padding: 0.8rem 5%; justify-content: space-between; }
-            .logo-text { display: flex; } /* Keep text on mobile for better brand exposure */
-            nav { display: none; } /* Use simple mobile nav if needed, but keeping it clean for now */
+            header { padding: 0.8rem 5%; flex-direction: column; gap: 10px; }
+            .logo-text { display: flex; }
+            nav { display: flex; gap: 15px; }
+            nav a { margin-left: 0; font-size: 0.9rem; }
         }
     </style>
 </head>
