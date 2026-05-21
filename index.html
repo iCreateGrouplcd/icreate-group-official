@@ -17,6 +17,7 @@
             --accent-color: #f5f5f5; /* Light Gray */
             --text-color: #333;
         }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -44,9 +45,9 @@
             align-items: center;
             text-decoration: none;
         }
-        .logo img {
-            height: 50px;
+        .logo i {
             margin-right: 10px;
+            font-size: 1.8rem;
         }
         nav a {
             margin-left: 20px;
@@ -232,13 +233,41 @@
         .factory-tour {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 40px;
             align-items: center;
         }
-        .factory-video-container {
+        .factory-visuals {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .factory-video-container, .factory-image-container {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .brand-identity {
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .brand-logo-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        .brand-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 400px;
+        }
+        .brand-box h4 {
+            color: var(--primary-color);
+            margin-top: 0;
         }
         footer {
             background: #111;
@@ -275,13 +304,14 @@
 
 <header>
     <a href="#" class="logo">
-        <img src="logo.png" alt="iCreate Group Logo">
+        <i class="fas fa-microchip"></i>
         iCreate GROUP
     </a>
     <nav>
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#factory">Factory</a>
+        <a href="#brand">Brand</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -306,40 +336,28 @@
             <p>Our facility is powered by state-of-the-art robotic lines, ensuring 100% precision and mass-scale output for global demand.</p>
         </div>
         <div class="feature-card">
-            <i class="fas fa-microchip"></i>
+            <i class="fas fa-layer-group"></i>
             <h3>Universal Compatibility</h3>
             <p>Perfect replacement for GX, JK, and DD quality levels. Engineered to define industry standards.</p>
         </div>
         <div class="feature-card">
-            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-check-double"></i>
             <h3>Ultra-Low RMA < 0.5%</h3>
             <p>Every screen undergoes strict 100% manual and automated testing before shipment. Quality is our lifeline.</p>
         </div>
     </div>
     
     <div class="certifications">
-        <div class="cert-item">
-            <i class="fas fa-certificate"></i>
-            ISO 9001
-        </div>
-        <div class="cert-item">
-            <i class="fas fa-shield-alt"></i>
-            CE Certified
-        </div>
-        <div class="cert-item">
-            <i class="fas fa-leaf"></i>
-            RoHS Compliant
-        </div>
-        <div class="cert-item">
-            <i class="fas fa-vial"></i>
-            UL Standard
-        </div>
+        <div class="cert-item"><i class="fas fa-certificate"></i> ISO 9001</div>
+        <div class="cert-item"><i class="fas fa-shield-alt"></i> CE Certified</div>
+        <div class="cert-item"><i class="fas fa-leaf"></i> RoHS Compliant</div>
+        <div class="cert-item"><i class="fas fa-vial"></i> UL Standard</div>
     </div>
 </section>
 
 <section id="products" class="product-highlight">
     <div class="product-image">
-        <img src="https://sc02.alicdn.com/kf/Ac31df9652941453c97bfa0f29ab20292z.png" alt="RJ Soft OLED 120Hz" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <img src="https://sc02.alicdn.com/kf/A1436ce7b03c44b8d9725bc962355368bZ.png" alt="RJ Brand LCD Showcase" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
     </div>
     <div class="product-info">
         <h2>RJ SOFT OLED 120Hz</h2>
@@ -359,26 +377,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Refresh Rate</td>
-                    <td>120Hz High Refresh</td>
-                    <td>60Hz Standard</td>
-                </tr>
-                <tr>
-                    <td>Color Gamut</td>
-                    <td>1:1 Original Level</td>
-                    <td>85% - 90%</td>
-                </tr>
-                <tr>
-                    <td>RMA Rate</td>
-                    <td>< 0.5%</td>
-                    <td>2% - 5%</td>
-                </tr>
-                <tr>
-                    <td>Thickness</td>
-                    <td>1:1 Fitment</td>
-                    <td>Slightly Thicker</td>
-                </tr>
+                <tr><td>Refresh Rate</td><td>120Hz High Refresh</td><td>60Hz Standard</td></tr>
+                <tr><td>Color Gamut</td><td>1:1 Original Level</td><td>85% - 90%</td></tr>
+                <tr><td>RMA Rate</td><td>< 0.5%</td><td>2% - 5%</td></tr>
+                <tr><td>Thickness</td><td>1:1 Fitment</td><td>Slightly Thicker</td></tr>
             </tbody>
         </table>
         <br>
@@ -386,32 +388,46 @@
     </div>
 </section>
 
+<section id="brand" class="section brand-identity">
+    <h2 class="section-title">Brand Identity</h2>
+    <p style="max-width: 800px; margin: 0 auto;">iCreate Group represents the perfect synergy between <b>Innovative Engineering</b> and <b>Reliable Manufacturing</b>.</p>
+    
+    <div class="brand-logo-display">
+        <div class="brand-box">
+            <i class="fas fa-microchip" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+            <h4>The iCreate Emblem</h4>
+            <p>Our logo features the microchip silhouette, symbolizing our deep technical expertise and focus on the internal quality that powers the world's mobile devices.</p>
+        </div>
+        <div class="brand-box">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 5px;"></div>
+                <div style="width: 50px; height: 50px; background: var(--secondary-color); border-radius: 5px;"></div>
+            </div>
+            <h4>Power & Precision</h4>
+            <p><b>iCreate Red</b> represents our passion for innovation and speed. <b>Professional Black</b> stands for the stability and precision that wholesale partners rely on.</p>
+        </div>
+    </div>
+</section>
+
 <div class="stats">
-    <div class="stat-item">
-        <h2>12+</h2>
-        <p>Years Experience</p>
-    </div>
-    <div class="stat-item">
-        <h2>50k+</h2>
-        <p>Monthly Output</p>
-    </div>
-    <div class="stat-item">
-        <h2>< 0.5%</h2>
-        <p>RMA Rate</p>
-    </div>
-    <div class="stat-item">
-        <h2>100%</h2>
-        <p>Factory Direct</p>
-    </div>
+    <div class="stat-item"><h2>12+</h2><p>Years Experience</p></div>
+    <div class="stat-item"><h2>50k+</h2><p>Monthly Output</p></div>
+    <div class="stat-item"><h2>< 0.5%</h2><p>RMA Rate</p></div>
+    <div class="stat-item"><h2>100%</h2><p>Factory Direct</p></div>
 </div>
 
 <section id="factory" class="section">
     <h2 class="section-title">Factory Tour & Quality Control</h2>
     <div class="factory-tour">
-        <div class="factory-video-container">
-            <video controls autoplay muted loop style="width: 100%; display: block;">
-                <source src="iCreate_LCD_Quality_Test_V2.mp4" type="video/mp4">
-            </video>
+        <div class="factory-visuals">
+            <div class="factory-video-container">
+                <video controls muted loop style="width: 100%; display: block;">
+                    <source src="iCreate_LCD_Quality_Test_V2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="factory-image-container">
+                <img src="https://sc02.alicdn.com/kf/A5026638010b84d4889558ef22f7c5c25a.png" alt="Factory Cleanroom" style="width: 100%; display: block;">
+            </div>
         </div>
         <div class="factory-info">
             <h3>Precision Testing Protocol</h3>
@@ -444,4 +460,4 @@
 </footer>
 
 </body>
-</html>
+    </html>
