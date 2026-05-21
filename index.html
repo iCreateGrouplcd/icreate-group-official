@@ -3,80 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iCreate Group | 10-Year Phone LCD Factory & OEM Leader</title>
-    <meta name="description" content="iCreate Group: A 10-year direct factory specializing in RJ, DD, GX, JK Brand LCDs for iPhone & Android. Fully automated production, <0.5% RMA. Global B2B supplier.">
+    <title>iCreate Group | Leading Phone LCD Factory</title>
+    <meta name="description" content="iCreate Group is a leading phone LCD factory specializing in RJ Brand Soft OLED & 120Hz screens. Wholesale manufacturer for global distributors with <0.5% RMA.">
     
-    <!-- Fonts & Icons -->
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-color: #d10a11;
-            --secondary-color: #1a1a1a;
-            --accent-color: #f5f5f5;
+            --primary-color: #d10a11; /* iCreate Red */
+            --secondary-color: #1a1a1a; /* Professional Black */
+            --accent-color: #f5f5f5; /* Light Gray */
             --text-color: #333;
         }
         html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0; padding: 0; line-height: 1.6; color: var(--text-color); background-color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
         }
-        
-        /* BACKGROUND PATTERN (Hand-drawn LCD Icons) */
-        .lcd-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d10a11' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 30V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v26c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2zm2 0h12V4H8v26zM28 24V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v20c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2zm2 0h12V4H30v20zM8 70V44c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v26c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2zm2 0h12V44H10v26zM28 58V44c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2zm2 0h12V44H30v14z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        /* HEADER & LOGO */
         header {
-            background: #fff; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .logo {
-            text-decoration: none; display: flex; align-items: center; gap: 12px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .logo-emblem {
-            width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
+        .logo-img {
+            width: 40px;
+            height: 40px;
         }
         .logo-text {
-            display: flex; flex-direction: column; line-height: 1;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
         }
-        .logo-text span:first-child { color: var(--primary-color); font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
-        .logo-text span:last-child { color: var(--secondary-color); font-weight: 900; font-size: 1rem; letter-spacing: 2px; }
-        
-        nav a { margin-left: 20px; text-decoration: none; color: var(--secondary-color); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover, nav a.active { color: var(--primary-color); }
-        
-        /* HERO */
+        .logo-text span:first-child { color: var(--primary-color); font-weight: 800; font-size: 1.4rem; }
+        .logo-text span:last-child { color: var(--secondary-color); font-weight: 900; font-size: 1rem; letter-spacing: 1px; }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
         .hero {
-            position: relative; height: 75vh; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden;
+            position: relative;
+            height: 80vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
         }
         .hero video {
-            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); opacity: 0.5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+            z-index: 0;
         }
-        .hero-content { position: relative; z-index: 1; padding: 0 5%; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 900; text-transform: uppercase; }
-        .hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 25px; font-weight: 500; }
-        
-        /* BUTTONS */
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 10%;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 900;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
         .cta-button {
-            background: var(--primary-color); color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: 0.3s; display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .cta-button:hover { background: #a0080d; transform: translateY(-2px); }
-
-        /* SECTIONS */
-        .section { padding: 80px 8%; position: relative; }
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: var(--secondary-color); font-weight: 800; }
+        .cta-button:hover {
+            background: #a0080d;
+            transform: scale(1.05);
+        }
+        .section {
+            padding: 80px 10%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            position: relative;
+            font-weight: 800;
+        }
         .section-title span { color: var(--primary-color); }
-
-        /* ABOUT / FACTORY */
+        
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         .about-text h3 { color: var(--primary-color); font-size: 1.6rem; margin-top: 0; }
-        .about-badges { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
-        .badge { background: #fff; border: 1px solid #eee; padding: 10px 15px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .badge i { color: var(--primary-color); font-size: 1.2rem; }
 
-        /* PRODUCTS */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: var(--accent-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .feature-card h3 { margin-bottom: 15px; }
+
+        /* PRODUCT GRID */
         .product-catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 30px; }
         .product-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; background: #fff; position: relative; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -84,51 +165,65 @@
         .product-tag { background: var(--secondary-color); color: #fff; padding: 4px 10px; font-size: 0.7rem; font-weight: bold; position: absolute; top: 10px; left: 10px; border-radius: 3px; z-index: 10; }
         .product-info { padding: 15px; text-align: center; }
         .product-info h4 { margin: 0 0 5px; color: var(--primary-color); font-size: 1.2rem; }
-        .product-info p { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.4; }
+        .product-info p { font-size: 0.85rem; color: #666; margin: 0; }
 
-        /* CERTIFICATES */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-        .cert-card { background: #fff; padding: 30px; border-radius: 10px; border: 1px solid #eee; transition: 0.3s; }
-        .cert-card:hover { border-color: var(--primary-color); }
-        .cert-card i { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; display: block; }
-        .cert-card h4 { margin: 0; font-size: 1.1rem; font-weight: 700; }
-
+        .factory-tour {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .factory-video-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
         /* FOOTER */
-        footer { background: var(--secondary-color); color: #fff; padding: 60px 8% 30px; }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .footer-brand p { color: #aaa; font-size: 0.9rem; max-width: 400px; }
-        
-        .contact-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 1px solid #333; padding-top: 30px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; }
-        .contact-item i { font-size: 1.4rem; color: var(--primary-color); width: 24px; text-align: center; }
-        .contact-item div { font-size: 0.9rem; font-weight: 500; }
-        .contact-item span { display: block; font-size: 0.75rem; color: #888; text-transform: uppercase; }
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 80px 10% 20px;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-item { display: flex; align-items: center; gap: 15px; }
+        .contact-item i { font-size: 1.5rem; color: var(--primary-color); width: 30px; text-align: center; }
+        .contact-item span { color: #888; font-size: 0.8rem; text-transform: uppercase; display: block; }
+        .contact-item div { font-weight: 600; font-size: 0.95rem; color: #fff; }
 
-        .social-row { display: flex; justify-content: center; gap: 30px; margin: 40px 0; border-bottom: 1px solid #333; padding-bottom: 40px; }
-        .social-row a { color: #fff; font-size: 1.8rem; transition: 0.3s; text-decoration: none; }
-        .social-row a:hover { color: var(--primary-color); transform: scale(1.1); }
-        
-        .copyright { text-align: center; color: #666; font-size: 0.8rem; margin-top: 20px; }
-
-        /* MOBILE OPTIMIZATION */
-        @media (max-width: 768px) {
-            header { padding: 10px 4%; }
-            .logo-text span:first-child { font-size: 1.2rem; }
-            .logo-text span:last-child { font-size: 0.8rem; }
-            nav { display: none; } 
-            
-            .hero { height: 60vh; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            
-            .about-grid { grid-template-columns: 1fr; }
-            .section { padding: 50px 6%; }
-            .section-title { font-size: 1.8rem; }
-            
-            .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
-            .footer-brand p { margin: 0 auto; }
-            .social-row { gap: 20px; }
-            .contact-list { grid-template-columns: 1fr; text-align: left; max-width: 300px; margin: 0 auto; }
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid, .factory-tour { grid-template-columns: 1fr; }
+            header { padding: 1rem 3%; }
+            nav { display: none; }
+            .contact-list { grid-template-columns: 1fr; max-width: 320px; }
         }
     </style>
 </head>
@@ -136,23 +231,20 @@
 
 <header>
     <a href="#" class="logo">
-        <div class="logo-emblem">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Circular Emblem from Photo -->
-                <circle cx="50" cy="50" r="48" fill="#fff" stroke="#eee" stroke-width="1"/>
-                <path d="M50 15 C30 15, 15 30, 15 50 C15 70, 30 85, 50 85 C70 85, 85 70, 85 50 C85 30, 70 15, 50 15" fill="#d10a11" />
-                <path d="M50 25 C35 25, 25 35, 25 50 C25 65, 35 75, 50 75 C65 75, 75 65, 75 50 C75 35, 65 25, 50 25" fill="#e0e0e0" />
-                <rect x="45" y="35" width="10" height="30" rx="2" fill="#d10a11" />
-                <circle cx="50" cy="30" r="5" fill="#d10a11" />
-            </svg>
-        </div>
+        <svg class="logo-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#fff" stroke="#eee" stroke-width="1"/>
+            <path d="M50 15 C30 15, 15 30, 15 50 C15 70, 30 85, 50 85 C70 85, 85 70, 85 50 C85 30, 70 15, 50 15" fill="#d10a11" />
+            <path d="M50 25 C35 25, 25 35, 25 50 C25 65, 35 75, 50 75 C65 75, 75 65, 75 50 C75 35, 65 25, 50 25" fill="#e0e0e0" />
+            <rect x="45" y="35" width="10" height="30" rx="2" fill="#d10a11" />
+            <circle cx="50" cy="30" r="5" fill="#d10a11" />
+        </svg>
         <div class="logo-text">
             <span>iCreate</span>
             <span>GROUP</span>
         </div>
     </a>
     <nav>
-        <a href="#about">About Us</a>
+        <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
@@ -165,140 +257,115 @@
     </video>
     <div class="hero-content">
         <h1>LEADING PHONE LCD FACTORY</h1>
-        <p>A 10-Year Direct Manufacturer of RJ, DD, GX & JK Series. Powering Global iPhone & Android Wholesalers.</p>
-        <a href="https://wa.me/8619126639108" class="cta-button">REQUEST FACTORY CATALOG</a>
+        <p>Premium RJ Brand & Soft OLED Manufacturer. Trusted OEM Partner for Tier-1 Global Distributors.</p>
+        <a href="https://wa.me/8619126639108" class="cta-button">Request Bulk Catalog</a>
     </div>
 </section>
 
-<section id="about" class="section lcd-pattern">
+<section id="about" class="section">
     <div class="about-grid">
         <div class="about-visual">
-            <img src="https://sc02.alicdn.com/kf/A5026638010b84d4889558ef22f7c5c25a.png" alt="10 Year Factory" style="width:100%; border-radius:10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <img src="https://sc02.alicdn.com/kf/A5026638010b84d4889558ef22f7c5c25a.png" alt="Factory" style="width:100%; border-radius:10px;">
         </div>
         <div class="about-text">
             <h2 class="section-title" style="text-align:left; margin-bottom:20px;">10 Years of <span>Factory Excellence</span></h2>
             <h3>Direct Source. No Middleman.</h3>
-            <p>iCreate Group has been a trusted pillar in the phone LCD industry for over a decade. Our facility is a <b>fully automated manufacturing hub</b>, specializing in both <b>iPhone and Android</b> screen production.</p>
-            <div class="about-badges">
-                <div class="badge"><i class="fas fa-robot"></i> Automated Production</div>
-                <div class="badge"><i class="fas fa-history"></i> 10+ Years Experience</div>
-                <div class="badge"><i class="fas fa-check-double"></i> 100% QC Passed</div>
-            </div>
+            <p>iCreate Group is a 10-year veteran factory in the phone LCD industry. Our facility is a fully automated manufacturing hub, utilizing state-of-the-art technology to ensure massive output and consistent quality for our global partners.</p>
+        </div>
+    </div>
+    <div class="features">
+        <div class="feature-card">
+            <i class="fas fa-robot"></i>
+            <h3>Fully Automated</h3>
+            <p>100% robotic precision lines for consistent mass-scale production.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-history"></i>
+            <h3>10-Year Veteran</h3>
+            <p>A decade of experience in manufacturing premium iPhone & Android screens.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <h3>Ultra-Low RMA</h3>
+            <p>Strict 100% manual and automated testing ensures RMA < 0.5%.</p>
         </div>
     </div>
 </section>
 
-<section id="products" class="section lcd-pattern" style="background:#fdfdfd;">
+<section id="products" class="section" style="background:#f9f9f9;">
     <h2 class="section-title">Wholesale <span>Product Series</span></h2>
-    <p style="text-align:center; max-width:700px; margin:-20px auto 40px;">Professional solutions for all <b>iPhone & Android</b> models. We provide a full spectrum of quality levels to fit your market needs.</p>
+    <p style="text-align:center; max-width:700px; margin:-20px auto 40px;">Professional solutions for all <b>iPhone & Android</b> models (Samsung, Xiaomi, Huawei, etc.).</p>
     
     <div class="product-catalog">
-        <!-- RJ SERIES -->
         <div class="product-card">
             <div class="product-tag">FLAGSHIP</div>
             <img src="https://sc02.alicdn.com/kf/A65f337bfb36041bd88f026ad7a8953a4l.png" alt="RJ Series">
             <div class="product-info">
                 <h4>RJ Brand</h4>
-                <p>Premium Soft OLED | 120Hz<br>iPhone 11-15 Pro Max Series</p>
+                <p>Premium Soft OLED | 120Hz<br>Original Grade Excellence</p>
             </div>
         </div>
-        <!-- GX SERIES -->
         <div class="product-card">
             <div class="product-tag" style="background:#cc6600;">PRO GRADE</div>
             <img src="https://sc02.alicdn.com/kf/Af22d6df8f12e4bf695ef77064fd8f0a10.png" alt="GX Series">
             <div class="product-info">
-                <h4>GX Brand</h4>
-                <p>Hard OLED & Premium Quality<br>Standard & Pro Models Available</p>
+                <h4>GX / JK Brand</h4>
+                <p>Hard OLED & Premium LCD<br>The Choice of Professionals</p>
             </div>
         </div>
-        <!-- JK SERIES -->
-        <div class="product-card">
-            <div class="product-tag" style="background:#800080;">VIBRANT LCD</div>
-            <img src="https://sc01.alicdn.com/kf/H6857f86440c946f9947967b558509748T.jpg" alt="JK Series">
-            <div class="product-info">
-                <h4>JK Brand</h4>
-                <p>Professional Grade LCD<br>Reliable Color & Response</p>
-            </div>
-        </div>
-        <!-- DD SERIES -->
         <div class="product-card">
             <div class="product-tag" style="background:#0066cc;">BUDGET</div>
             <img src="https://sc02.alicdn.com/kf/A1436ce7b03c44b8d9725bc962355368bZ.png" alt="DD Series">
             <div class="product-info">
                 <h4>DD Brand</h4>
-                <p>High-Performance Incell<br>Cost-Effective & Durable</p>
+                <p>High-Performance Incell<br>Reliable & Cost-Effective</p>
             </div>
         </div>
-        <!-- ANDROID SERIES -->
         <div class="product-card">
             <div class="product-tag" style="background:#339933;">UNIVERSAL</div>
             <img src="https://sc02.alicdn.com/kf/Ac31df9652941453c97bfa0f29ab20292z.png" alt="Android Series">
             <div class="product-info">
                 <h4>Android Series</h4>
-                <p>Samsung, Xiaomi, Huawei<br>Global Wholesale Supply</p>
+                <p>Samsung, Xiaomi, Huawei<br>Full Wholesale Catalog</p>
             </div>
         </div>
     </div>
-    
-    <div style="text-align:center; margin-top:40px;">
-        <a href="mailto:cs@icreate-group.com" class="cta-button" style="background:var(--secondary-color);">GET FULL PRICE LIST</a>
+</section>
+
+<section id="certificates" class="section">
+    <h2 class="section-title">Verified <span>Quality & Safety</span></h2>
+    <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; text-align: center;">
+        <div style="max-width: 150px;"><i class="fas fa-certificate" style="font-size: 4rem; color: var(--primary-color);"></i><p>ISO 9001</p></div>
+        <div style="max-width: 150px;"><i class="fas fa-shield-alt" style="font-size: 4rem; color: var(--primary-color);"></i><p>CE Certified</p></div>
+        <div style="max-width: 150px;"><i class="fas fa-leaf" style="font-size: 4rem; color: var(--primary-color);"></i><p>RoHS Compliant</p></div>
+        <div style="max-width: 150px;"><i class="fas fa-vial" style="font-size: 4rem; color: var(--primary-color);"></i><p>UL Standard</p></div>
     </div>
 </section>
 
-<section id="certificates" class="section lcd-pattern">
-    <h2 class="section-title">Verified <span>Quality & Safety</span></h2>
-    <p style="text-align:center; max-width:700px; margin:-20px auto 40px;">Every iCreate screen is manufactured under strict ISO standards to ensure international compliance.</p>
-    
-    <div class="cert-grid">
-        <div class="cert-card">
-            <i class="fas fa-award"></i>
-            <h4>ISO 9001:2015</h4>
+<section id="factory" class="section" style="background:#fdfdfd;">
+    <h2 class="section-title">Factory Tour</h2>
+    <div class="factory-tour">
+        <div class="factory-video-container">
+            <video controls autoplay muted loop style="width: 100%; display: block;">
+                <source src="iCreate_LCD_Quality_Test_V2.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="cert-card">
-            <i class="fas fa-shield-alt"></i>
-            <h4>CE Certification</h4>
-        </div>
-        <div class="cert-card">
-            <i class="fas fa-leaf"></i>
-            <h4>RoHS Compliant</h4>
-        </div>
-        <div class="cert-card">
-            <i class="fas fa-vial"></i>
-            <h4>UL Standard</h4>
+        <div class="factory-info">
+            <h3>Precision Testing Protocol</h3>
+            <p>Our commitment to quality goes beyond automation. Each batch of screens undergoes a dual-layer verification: 100% Automated Pixel Check + 100% Manual Touch Inspection.</p>
         </div>
     </div>
 </section>
 
 <footer id="contact">
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <div class="logo" style="margin-bottom:20px;">
-                <div class="logo-emblem">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="48" fill="#fff" />
-                        <path d="M50 15 C30 15, 15 30, 15 50 C15 70, 30 85, 50 85 C70 85, 85 70, 85 50 C85 30, 70 15, 50 15" fill="#d10a11" />
-                        <path d="M50 25 C35 25, 25 35, 25 50 C25 65, 35 75, 50 75 C65 75, 75 65, 75 50 C75 35, 65 25, 50 25" fill="#e0e0e0" />
-                        <rect x="45" y="35" width="10" height="30" rx="2" fill="#d10a11" />
-                        <circle cx="50" cy="30" r="5" fill="#d10a11" />
-                    </svg>
-                </div>
-                <div class="logo-text"><span style="color:#fff;">iCreate</span><span style="color:var(--primary-color);">GROUP</span></div>
-            </div>
-            <p>The leading phone LCD manufacturing backbone for global tier-1 distributors. 10 years of quality, automation, and direct factory reliability.</p>
-        </div>
-        <div class="footer-links" style="text-align:right;">
-            <a href="https://wa.me/8619126639108" class="cta-button">WHATSAPP US</a>
-        </div>
-    </div>
-
-    <div class="social-row">
+    <div class="social-links">
         <a href="https://www.linkedin.com/company/icreate-group" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.facebook.com/icreategrouplcd" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/icreategroup" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://x.com/icreategroup" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
         <a href="https://www.tiktok.com/@icreategroup" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
-
+    
     <ul class="contact-list">
         <li class="contact-item">
             <i class="fas fa-envelope"></i>
@@ -313,9 +380,9 @@
             <div><span>WeChat ID</span>cserenagh</div>
         </li>
     </ul>
-
-    <div class="copyright">
-        © 2026 iCreate Group. All Rights Reserved. | Designed for Global Wholesalers.
+    
+    <div style="margin-top: 40px; color: #666; font-size: 0.8rem;">
+        © 2026 iCreate Group. All Rights Reserved. | Leading Phone LCD Factory
     </div>
 </footer>
 
